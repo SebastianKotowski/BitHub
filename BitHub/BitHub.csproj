@@ -185,6 +185,10 @@
     <Compile Include="Migrations\201905210930120_addConventions.Designer.cs">
       <DependentUpon>201905210930120_addConventions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905210943042_populateGenreTable.cs" />
+    <Compile Include="Migrations\201905210943042_populateGenreTable.Designer.cs">
+      <DependentUpon>201905210943042_populateGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -277,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905210930120_addConventions.resx">
       <DependentUpon>201905210930120_addConventions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905210943042_populateGenreTable.resx">
+      <DependentUpon>201905210943042_populateGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
