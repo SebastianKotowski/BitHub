@@ -5,14 +5,16 @@ namespace BitHub.Models
 {
     public class Bit
     {
-        public int Id { get; set; }
-        [Required]
+        public int Id { get; set; }       
         public ApplicationUser Artist { get; set; }
+        [Required]
+        public string ArtistId { get; set; }
         public DateTime Date { get; set; }
         [Required]
         [StringLength(255)]
         public string Venue { get; set; }
-        [Required]
         public Genre Genre { get; set; }
+        [Required]
+        public byte GenreId { get; set; }
     }
 }

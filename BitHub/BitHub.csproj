@@ -190,6 +190,10 @@
     <Compile Include="Migrations\201905210943042_populateGenreTable.Designer.cs">
       <DependentUpon>201905210943042_populateGenreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905231605295_addForeginKeyForBit.cs" />
+    <Compile Include="Migrations\201905231605295_addForeginKeyForBit.Designer.cs">
+      <DependentUpon>201905231605295_addForeginKeyForBit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -200,6 +204,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\BitFormViewModel.cs" />
+    <Compile Include="ViewModels\FutureDate.cs" />
+    <Compile Include="ViewModels\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905210943042_populateGenreTable.resx">
       <DependentUpon>201905210943042_populateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905231605295_addForeginKeyForBit.resx">
+      <DependentUpon>201905231605295_addForeginKeyForBit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
