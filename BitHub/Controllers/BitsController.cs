@@ -34,7 +34,7 @@ namespace BitHub.Controllers
             var bit = new Bit()
             {
                 ArtistId = User.Identity.GetUserId(),
-                Date = DateTime.Parse(string.Format($"{viewModel.Date} {viewModel.Time}")),
+                Date = viewModel.DateTime,
                 GenreId = viewModel.Genre,
                 Venue = viewModel.Venue
             };
