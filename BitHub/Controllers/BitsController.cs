@@ -31,10 +31,17 @@ namespace BitHub.Controllers
         [HttpPost]
         public ActionResult Create(BitFormViewModel viewModel)
         {
+            if(!ModelState.IsValid)
+            {
+                viewModel.Genres = db.Genres.ToList();
+
+                return View("create", viewModel);
+            }
+
             var bit = new Bit()
             {
                 ArtistId = User.Identity.GetUserId(),
-                Date = viewModel.DateTime,
+                Date = viewModel.GetDateTime(),
                 GenreId = viewModel.Genre,
                 Venue = viewModel.Venue
             };
