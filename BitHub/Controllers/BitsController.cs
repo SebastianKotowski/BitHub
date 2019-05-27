@@ -29,6 +29,7 @@ namespace BitHub.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(BitFormViewModel viewModel)
         {
             if(!ModelState.IsValid)
