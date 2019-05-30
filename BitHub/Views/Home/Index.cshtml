@@ -4,9 +4,27 @@
     ViewBag.Title = "Home Page";
 }
 
-<ul>
+<ul class="bits">
     @foreach(var bit in Model)
     {
-        <li>@bit.Date - @bit.Artist.Name</li>
+        <li>
+            <div class="date">
+                <div class="month">
+                    @bit.Date.ToString("MMM")
+                </div>
+                <div class="day">
+                    @bit.Date.ToString("d ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="artist">
+                    @bit.Artist.Name
+                </span>
+                <span class="genre">
+                    @bit.Genre.Name
+                </span>
+            </div>
+                                   
+        </li>
     }
 </ul>

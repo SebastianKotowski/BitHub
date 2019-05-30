@@ -1,6 +1,6 @@
 ﻿body {
     font-family: "Open sans", Helvetica, Arial, sans-serif;
-    padding-top: 50px;
+    padding-top: 90px;
     padding-bottom: 20px;
 }
 
@@ -81,4 +81,53 @@ border-color: #FF9069;
 span.field-validation-error {
     color: red;
     font-weight: bold;
+}
+
+
+/*Page level styles*/
+
+.bits {
+    list-style: none;
+}
+
+.bits > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.bits > li .date {
+    background: red;
+    color: white;
+    text-align: center;
+    width: 60px;
+    border-radius: 8px;
+}
+
+.bits > li .date .month {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+.bits > li .date .day {
+    background: #f7f7f7;
+    color: #333;
+    font-size: 20px;
+    padding: 6px 12px;
+}
+
+.bits > li .details {
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+.bits > li .details .artist {
+    font-weight: bold;
+    display: block;
+}
+
+.bits > li .details .genre {
+    font-size: 15px;
 }

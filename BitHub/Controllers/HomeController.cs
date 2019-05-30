@@ -19,6 +19,7 @@ namespace BitHub.Controllers
         {
             var upcommingBits = db.Bits
                 .Include(b => b.Artist)
+                .Include(g => g.Genre)
                 .Where(b => b.Date > DateTime.Now);
 
             return View(upcommingBits);
