@@ -11,7 +11,7 @@ namespace BitHub.ViewModels
         [Required]
         public string Venue { get; set; }
         [Required]
-        [FutureDate]
+        //[FutureDate]
         public string Date { get; set; }
         [Required]
         [ValidTime]

@@ -194,13 +194,25 @@
     <Compile Include="Migrations\201905231605295_addForeginKeyForBit.Designer.cs">
       <DependentUpon>201905231605295_addForeginKeyForBit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905301110329_AddAnmeToApplicationUser.cs" />
+    <Compile Include="Migrations\201905301110329_AddAnmeToApplicationUser.Designer.cs">
+      <DependentUpon>201905301110329_AddAnmeToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Bit.cs" />
+    <Compile Include="ViewModels\ExternalLoginListViewModel.cs" />
+    <Compile Include="ViewModels\ForgotViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\SendCodeViewModel.cs" />
+    <Compile Include="ViewModels\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="ViewModels\ManageViewModels.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\BitFormViewModel.cs" />
@@ -296,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905231605295_addForeginKeyForBit.resx">
       <DependentUpon>201905231605295_addForeginKeyForBit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905301110329_AddAnmeToApplicationUser.resx">
+      <DependentUpon>201905301110329_AddAnmeToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
