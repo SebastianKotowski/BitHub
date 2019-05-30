@@ -1,16 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BitHub.Models;
 using System.Web.Mvc;
+using System.Data.Entity;
+using System.Linq;
+using System;
 
 namespace BitHub.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db;
+
+        public HomeController ()
+        {
+            db = new ApplicationDbContext();
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var upcommingBits = db.Bits
+                .Include(b => b.Artist)
+                .Where(b => b.Date > DateTime.Now);
+
+            return View(upcommingBits);
         }
 
         public ActionResult About()
