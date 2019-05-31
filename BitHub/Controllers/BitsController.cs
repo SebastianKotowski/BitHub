@@ -2,6 +2,7 @@
 using BitHub.ViewModels;
 using Microsoft.AspNet.Identity;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -14,6 +15,23 @@ namespace BitHub.Controllers
         public BitsController()
         {
             db = new ApplicationDbContext();
+        }
+
+        [Authorize]
+        public ActionResult Attending()
+        {
+            var userId = User.Identity.GetUserId();
+
+            var bits = db.Attendences
+                .Where(a => a.AttendeeId == userId)
+                .Select(a => a.Bit)
+                .Include(g => g.Artist)
+                .Include(g => g.Genre)
+                .ToList();
+
+            ViewBag.Heading = "Bits I'm Attending";
+
+            return View("Bits", bits);
         }
 
         [Authorize]

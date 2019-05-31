@@ -22,7 +22,9 @@ namespace BitHub.Controllers
                 .Include(g => g.Genre)
                 .Where(b => b.Date > DateTime.Now);
 
-            return View(upcommingBits);
+            ViewBag.Heading = "Upcomming Bits";
+
+            return View("Bits", upcommingBits);
         }
 
         public ActionResult About()
